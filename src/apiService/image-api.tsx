@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 import { ImageResponse } from './image-api.types';
 
 const API_KEY = 'mskXwYk7bCouuxf64aJE3hOqbVNI95fUDMc0-66QkWM';
@@ -9,7 +9,7 @@ const fetchImages = async (
   currentPage: number,
   searchQuery: string
 ): Promise<ImageResponse> => {
-  const response: AxiosResponse<ImageResponse> = await axios.get('', {
+  const response = await axios.get<ImageResponse>('', {
     params: {
       query: searchQuery,
       page: currentPage,
@@ -18,6 +18,7 @@ const fetchImages = async (
       client_id: API_KEY,
     },
   });
+
   return response.data;
 };
 
