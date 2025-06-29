@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { ImageResponse } from './image-api.types';
 
-const API_KEY = 'mskXwYk7bCouuxf64aJE3hOqbVNI95fUDMc0-66QkWM';
+const API_KEY = '9w97Pb99jXHhNYoe8GBo9dM00UNydqvm8EukWNyUwo0';
 
 axios.defaults.baseURL = 'https://api.unsplash.com/search/photos';
 
